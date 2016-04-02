@@ -4,6 +4,7 @@ class CreateIngredients < ActiveRecord::Migration
       t.string :name
       t.string :slug
       t.string :country
+      t.integer :category_id
 
       t.timestamps null: false
     end

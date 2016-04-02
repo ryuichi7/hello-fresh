@@ -1,0 +1,2 @@
+module IngredientSubCategoriesHelper
+end
