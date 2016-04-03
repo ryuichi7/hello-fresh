@@ -14,6 +14,7 @@ class Importer
 	end
 
 	def import
-		data.each { |row| Ingredient.create_and_associate(row) }
+		translator = Translator.new(token)
+		data.each { |row| Ingredient.create_and_associate(row, translator) }
 	end
 end

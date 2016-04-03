@@ -1,0 +1,20 @@
+<div class='panel panel-default panel-transparent'>
+	<div class='panel-heading'>
+		<h2>Ingredients</h2>
+	</div>
+	<div class='panel-body'>
+		<p>Click to search</p>
+		<%= form_tag ingredients_path, method: "get" do %>
+			<%= text_field_tag :ingredient, nil, class: "form-control comment", placeholder: "ingredient" %><br>
+			<%= submit_tag 'Submit', class: "btn btn-primary transparent" %>
+		<% end %>
+		<%= page_entries_info @ingredients %>
+		<%= paginate @ingredients, window: 1 %>
+	</div>
+	<ul class='list-group'>
+		<% @ingredients.each do |ingredient| %>
+			<li class="list-group-item"><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
+		<% end %>
+	</ul>
+
+</div>

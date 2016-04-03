@@ -1,0 +1,12 @@
+<div class='panel panel-default panel-transparent'>
+	<div class='panel-heading'>
+		<h2><%= @ingredient.name %></h2>
+	</div>
+	<div class='panel-body'>
+	</div>
+	<ul class="list-group">
+		<% @ingredient.sub_categories.each do |sub_category| %>
+			<li class='list-group-item'><%= link_to sub_category.name, sub_category_path(sub_category) %></li>
+		<% end %>
+	</ul>
+</div>

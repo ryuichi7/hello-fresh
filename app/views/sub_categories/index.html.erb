@@ -1,0 +1,15 @@
+<div class='panel panel-default panel-transparent'>
+	<div class='panel-heading'>
+		<h2>Categories</h2>
+	</div>
+	<div class='panel-body'>
+		<%= page_entries_info @categories %>
+		<%= paginate @categories, window: 1 %>
+	</div>
+	<ul class='list-group'>
+		<% @categories.each do |category| %>
+			<li class="list-group-item"><%= link_to category.name, sub_category_path(category) %></li>
+		<% end %>
+	</ul>
+
+</div>

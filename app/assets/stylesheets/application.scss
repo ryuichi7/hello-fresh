@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ 
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background: url('/assets/food.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+		color:#fff;
+  	background-color:#333;
+  	font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+}
+
+.navbar {
+	background: none;
+	border: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.transparent {
+	background: rgba(122, 130, 136, 0.5)!important;
+}
+
+
+ .panel-transparent {
+    background: none;
+    border: none;
+    width: 50%;
+  }
+
+  .panel-transparent .panel-heading{
+    background: rgba(122, 130, 136, 0.5)!important;
+    border: none;
+  }
+
+  .panel-transparent .panel-body{
+    background: none;
+    border: none;
+  }
+
+  .panel-transparent .list-group{
+    background: none;
+    border: none;
+  }
+
+  .panel-transparent .list-group-item{
+    background: rgba(122, 130, 136, 0.5)!important;
+    margin: 1%;
+    border: none;
+    color: white;
+  }
+
+/*/////////FONTS/////////////*/
+
+.panel-transparent .panel-heading h2{
+    color: white;
+  }
+
+.panel-transparent .list-group-item a{
+    color: white;
+  }
+
+.navbar li {
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
