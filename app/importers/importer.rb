@@ -2,10 +2,11 @@ require 'open-uri'
 require 'csv'
 
 class Importer 
-	attr_accessor :path
+	attr_accessor :path, :translator
 
-	def initialize(path)
+	def initialize(path, translator = nil)
 		@path = path
+		@translator = translator
 	end
 
 	def data
@@ -14,7 +15,6 @@ class Importer
 	end
 
 	def import
-		translator = Translator.new(token)
 		data.each { |row| Ingredient.create_and_associate(row, translator) }
 	end
 end

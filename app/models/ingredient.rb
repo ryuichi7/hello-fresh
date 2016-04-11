@@ -23,12 +23,11 @@ class Ingredient < ActiveRecord::Base
 			name: row[1],
 			slug: row[2]
 				)
+		
 		eng_slug = ingredient.country.length > 2 ? ingredient.slug : translator.translate(ingredient.country, ingredient.slug)
 		puts eng_slug
 		database_matches = category_matches(eng_slug, SQL)
-		associate(database_matches, ingredient)
-		
-
+		associate(database_matches, ingredient)		
 	end
 
 	def self.category_matches(name, sql)
